@@ -3,16 +3,14 @@ import {useDispatch} from 'react-redux';
 import s from "./style.module.css";
 
 export function ExpenseInput(props) {
+  const dispatch = useDispatch();
 
-  const dispatch =useDispatch();
-
-  function submit(e){
+  function submit(e) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name");
     const price = formData.get("price");
-    
-    dispatch(addExpense(name,price));
+    dispatch(addExpense({ name, price }));
   }
 
   return (

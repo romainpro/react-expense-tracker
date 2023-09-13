@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 export function App() {
   const expenseList = useSelector((store) =>store.EXPENSE.expenseList);
+  console.log("***",expenseList)
   return (
     <div className={s.main_container}>
       <div className={`row ${s.header}`}>
