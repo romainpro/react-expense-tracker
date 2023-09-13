@@ -2,6 +2,7 @@ import { ExpenseInput } from "./containers/ExpenseInput/ExpenseInput";
 import { List } from "components/List/List";
 import s from "./style.module.css";
 import { useSelector } from "react-redux";
+import { IncomeInput } from "components/IncomeInput/IncomeInput";
 
 export function App() {
   const expenseList = useSelector((store) =>store.EXPENSE.expenseList);
@@ -13,7 +14,7 @@ export function App() {
           Logo
         </div>
         <div className={`col-9 ${s.income_input}`}>
-          Income input
+          <IncomeInput/>
         </div>
       </div>
       <div className={`row ${s.workspace}`}>
